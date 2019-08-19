@@ -35,52 +35,27 @@
     </div>
     </nav>
     <div class="container">
-        <h3>Simple Version</h3>
-        <div id="status"></div>
-        <input type=file class="img-upload-input" editor="#img-upload-panel" target="#image" status="#status" passurl="" pshape="square" w=300 h=300 size="viewport"/>
-        <img src="" alt="" id="image"/>
-    </div>
-    <div class="container" id="img-upload-panel">
-        <h4 class="modal-title">Upload Photo</h4>
-        <div class="row">
-          <div class="col">
-            <div class="img-edit-container"></div>
-          </div>
-        </div>
-        <div class="row container">
-          <div class="col">
-            <label>Brightness</label>
-            <input type="range" class="form-control-range filter" min=0 max=200 value=100 step=1 filter="brightness"/>
-          </div>
-          <div class="col">
-            <label>Threshold</label>
-            <input type="range" class="form-control-range filter" min=0 max=200 value=100 step=1 filter="threshold"/>
-          </div>
-        </div>
-        <div class="row container">
-          <div class="col">
-            <button type="button" class="btn btn-dark filter" filter="grayscale">Grayscale</button>
-          </div>
-          <div class="col">
-            <button type="button" class="btn btn-dark filter" filter="sharpen">Sharpen</button>
-          </div>
-          <div class="col"> 
-            <button type="button" class="btn btn-dark filter" filter="blur">Blur</button>
-          </div>
-          <div class="col"> 
-            <button type="button" class="btn btn-dark img-clear-filter">Clear</button>
-          </div>
-          <div class="col"> 
-            <button type="button" class="btn btn-dark img-rotate-left">Rotate Left</button>
-          </div>
-          <div class="col"> 
-            <button type="button" class="btn btn-dark img-rotate-right">Rotate Right</button>
-          </div>
-        </div>
-        <div class="container">
-            <button type="button" class="btn btn-secondary img-remove-btn">Clear</button>
-            <button type="button" class="btn btn-primary img-upload-btn">Upload</button>
-        </div>
+        <h4>Open Source Image Uploader created with jquery. Build over Cropper Library.</h4>
+        <h5>Key Features</h5>
+        <ul>
+            <li>Customizable Image upload menu</li>
+            <li>Edit Image before uploading</li>
+            <li>Image Cropping facility</li>
+            <li>Apply filters to Image</li>
+            <li>Upload Image using ajax</li>
+            <li>Easily Integrable with bootstrap</li>
+        </ul>
+        <h5>Acknowledgement</h5>
+        <p>The backbone of this plugin is Cropper Library so all credit goes to it</p>
+        <ul>
+            <li><a href="https://foliotek.github.io/Croppie/">Cropper Library</a></li>
+            <li><a href="https://pjreddie.com/courses/computer-vision/">Ancient Secret of Computer Vison Videos</a></li>
+            <li><a href="https://www.html5rocks.com/en/tutorials/canvas/imagefilters/">Blog Post</a></li>
+        </ul>
+        <h5>Contributing</h5>
+        <p>Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Please make sure to update tests as appropriate.</p>
+        <h5>License</h5>
+        <a href="https://choosealicense.com/licenses/mit/">MIT</a>
     </div>
     <footer class="footer-panel">
         <div class="container-fluid clearfix">

@@ -3,7 +3,7 @@
 Open Source Image Uploader created with jquery. Build over Cropper Library.
 
 #Examples
-[Demo Material]()
+[Demo Material](https://tarun-bisht.github.io/ImgUploader/)
 
 ## Key Features
 * Customizable Image upload menu
@@ -15,7 +15,7 @@ Open Source Image Uploader created with jquery. Build over Cropper Library.
 
 ## Installation
 
-Include Croppie and ImgUploader library to HTML inside Footer
+Include Jquery, Croppie and ImgUploader library to HTML inside Footer if using Bootstrap modal then ensure that bootstrap and it's JavaScript file are include in template.
 ```html
 <script src="image_uploader/croppie.min.js"></script>
 <script src="image_uploader/img.uploader.min.js"></script>
