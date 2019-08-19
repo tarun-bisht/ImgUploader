@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Quicksand|Source+Code+Pro');
+*
+{
+	font-family: 'Source Code Pro', monospace;
+}
+body
+{
+    background: -webkit-linear-gradient(20deg, rgba(23,185,255,1) 0%, rgba(77,172,255,1) 50%, rgba(120,163,255,1) 90%, rgba(120,163,255,1) 100%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+a
+{
+  text-decoration:none;
+  color: #111;
+  cursor: pointer;
+}
+a:hover
+{
+  text-decoration: none;
+}
+.container
+{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.portrait
+{
+    height: 180px;
+    width: 120px;
+    margin: 1rem;
+}
+.footer-panel
+{
+  background: #fff;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+}
+@media (max-width: 992px)
+{
+    .navbar-brand
+    {
+        font-size: 1rem;
+    }
+    .nav-link
+    {
+        font-size: 1rem;
+    }
+    .logo
+    {
+        height: 120px;
+        width: 120px;
+    }
+    .portrait
+    {
+        height: 120px;
+        width: 80px;
+        margin: 1rem;
+    }
+    .footer-panel
+    {
+        display:none;
+    }
+}
