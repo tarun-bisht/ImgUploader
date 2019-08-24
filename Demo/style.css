@@ -10,6 +10,9 @@ li
 body
 {
     background: -webkit-linear-gradient(20deg, rgba(23,185,255,1) 0%, rgba(77,172,255,1) 50%, rgba(120,163,255,1) 90%, rgba(120,163,255,1) 100%);
+}
+.center-item
+{
     text-align: center;
     display: flex;
     flex-direction: column;
