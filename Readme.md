@@ -17,15 +17,15 @@ Open Source Image Uploader created with jquery. Build over Cropper Library.
 
 Include Jquery, Croppie and ImgUploader library to HTML inside Footer if using Bootstrap modal then ensure that bootstrap and it's JavaScript file are include in template.
 ```html
-<script src="image_uploader/croppie.min.js"></script>
-<script src="image_uploader/img.uploader.min.js"></script>
+<script src="ImgUploader/croppie.min.js"></script>
+<script src="ImgUploader/imguploader.bs.minify.js"></script>
 ```
 Including Croppie CSS to HTML inside *<head>*
 ```html
-<link href="image_uploader/croppie.css" rel="stylesheet">
+<link rel="stylesheet" href="ImgUploader/croppie.css">
 ```
 ## ImgUploader Classes
-* "classes ending with suffix -bs are bootstrap modal specific"
+** Classes ending with suffix -bs are bootstrap modal specific **
 #### img-upload-input and img-upload-input-bs
 This class is applied to *<input>* which triggers ImgUploader Library after image file is choosen.
 #### img-edit-container
@@ -96,6 +96,50 @@ Smooth out sharp edges in image. * "Single Input"
 ### 1. Creating an Image Uploader Menu
 This menu will appear to the user after the image has been selected. The menu creation is customizable and its design depends on the developer. The menu can also be in the form of a Modal. in this example, bootstrap modal is used.
 ```html
+<div class="container" id="img-upload-panel">
+  <h4 class="modal-title">Upload Photo</h4>
+  <div class="row">
+    <div class="col">
+      <div class="img-edit-container"></div>
+    </div>
+  </div>
+  <div class="row container">
+    <div class="col">
+      <label>Brightness</label>
+      <input type="range" class="form-control-range filter" min=0 max=200 value=100 step=1 filter="brightness"/>
+    </div>
+    <div class="col">
+      <label>Threshold</label>
+      <input type="range" class="form-control-range filter" min=0 max=200 value=100 step=1 filter="threshold"/>
+    </div>
+  </div>
+  <div class="row container">
+    <div class="col">
+      <button type="button" class="btn btn-dark filter" filter="grayscale">Grayscale</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-dark filter" filter="sharpen">Sharpen</button>
+    </div>
+    <div class="col"> 
+      <button type="button" class="btn btn-dark filter" filter="blur">Blur</button>
+    </div>
+    <div class="col"> 
+      <button type="button" class="btn btn-dark img-clear-filter">Clear</button>
+    </div>
+    <div class="col"> 
+      <button type="button" class="btn btn-dark img-rotate-left">Rotate Left</button>
+    </div>
+    <div class="col"> 
+      <button type="button" class="btn btn-dark img-rotate-right">Rotate Right</button>
+    </div>
+  </div>
+  <div class="container">
+      <button type="button" class="btn btn-secondary img-remove-btn">Clear</button>
+      <button type="button" class="btn btn-primary img-upload-btn">Upload</button>
+  </div>
+</div>
+```
+```html
 <!-- Using Bootstrap Modal -->
 <div class="modal fade" id="img-upload-panel">
   <div class="modal-dialog modal-lg">
@@ -149,56 +193,13 @@ This menu will appear to the user after the image has been selected. The menu cr
   </div>
 </div>
 ```
-```html
-<div class="container" id="img-upload-panel">
-  <h4 class="modal-title">Upload Photo</h4>
-  <div class="row">
-    <div class="col">
-      <div class="img-edit-container"></div>
-    </div>
-  </div>
-  <div class="row container">
-    <div class="col">
-      <label>Brightness</label>
-      <input type="range" class="form-control-range filter" min=0 max=200 value=100 step=1 filter="brightness"/>
-    </div>
-    <div class="col">
-      <label>Threshold</label>
-      <input type="range" class="form-control-range filter" min=0 max=200 value=100 step=1 filter="threshold"/>
-    </div>
-  </div>
-  <div class="row container">
-    <div class="col">
-      <button type="button" class="btn btn-dark filter" filter="grayscale">Grayscale</button>
-    </div>
-    <div class="col">
-      <button type="button" class="btn btn-dark filter" filter="sharpen">Sharpen</button>
-    </div>
-    <div class="col"> 
-      <button type="button" class="btn btn-dark filter" filter="blur">Blur</button>
-    </div>
-    <div class="col"> 
-      <button type="button" class="btn btn-dark img-clear-filter">Clear</button>
-    </div>
-    <div class="col"> 
-      <button type="button" class="btn btn-dark img-rotate-left">Rotate Left</button>
-    </div>
-    <div class="col"> 
-      <button type="button" class="btn btn-dark img-rotate-right">Rotate Right</button>
-    </div>
-  </div>
-  <div class="container">
-      <button type="button" class="btn btn-secondary img-remove-btn">Clear</button>
-      <button type="button" class="btn btn-primary img-upload-btn">Upload</button>
-  </div>
-</div>
-```
 ### 2.Creating an *<input>* tag for choosing Image.
 ```html
-<input type=file class="img-upload-input" editor="#img-upload-panel" target="#profile-img" status="#status" passurl="/profile-img-process" pshape="circle" w=200 h=200 size="viewport"/>
+<input type=file class="img-upload-input" editor="#img-upload-panel" target="#image" status="#status" passurl="" pshape="square" w=300 h=300 size="viewport"/>
 ```
 ```html
-<input type=file class="img-upload-input" editor="#img-upload-panel" target="#image" status="#status" passurl="" pshape="square" w=300 h=150 size="{1920,480}"/>
+<!-- For Bootstrap Modal as Image Uploader Menu-->
+<input type=file class="img-upload-input-bs" editor="#img-upload-panel" target="#image" status="#status" passurl="" pshape="circle" w=300 h=300 size="{150,150}"/>
 ```
 ## Acknowlegement
 The backbone of this plugin is Cropper Library so all credit goes to it.
