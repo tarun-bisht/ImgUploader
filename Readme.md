@@ -2,8 +2,8 @@
 
 Open Source Image Uploader created with jquery. Build over Cropper Library.
 
-#Examples
-[Demo Material](https://tarun-bisht.github.io/ImgUploader/)
+## Examples
+[See demo here](https://tarun-bisht.github.io/ImgUploader/)
 
 ## Key Features
 * Customizable Image upload menu
